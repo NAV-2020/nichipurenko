@@ -9,3 +9,7 @@
 П.С. На майбутнє, коли Вам потрібно буде здавати ДЗ, замість файлу в MtStat Ви можете скидати посилання на файл, 
 або папку у ВАШОМУ публічному репозиторії.
 	Але називати його/її потрібно відповідно - Lesson_5_DZ_ВАШЕ_ПРІЗВИЩЕ. DZ або HW від слова Homework.
+
+
+   https://github.com/NAV-2020/nichipurenko/blob/master/Lesson_5_DZ_Nichipurenko_A.V/Lesson_5_DZ_Nichipurenko_A.V.txt
+   
