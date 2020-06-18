@@ -26,3 +26,44 @@ for i in range(len (example)):
     print(example[i], end=' ')
 
 
+example = 'silly walks'
+for i in example:
+    if i =='s':
+        print("One more")
+
+
+print (max ('Text')) 
+print (min ('Text'))
+
+
+example = 'silly walks'
+print(len (example))
+
+
+example = 'silly walks'
+print(list(example))
+
+example = 'silly walks' #скільки разів повторюється елемент
+print(example.count('l'))
+
+
+example = 'silly walks' #перша літра велика
+print(example.capitalize())
+
+print("hello".upper()) #всі великі літери
+
+# if example [-1:-3] == '.txt'
+ 
+ #example = 'silly walks'
+ #print(example.find('s'))
+
+ 
+
+
+
+
+
+
+
+
+
