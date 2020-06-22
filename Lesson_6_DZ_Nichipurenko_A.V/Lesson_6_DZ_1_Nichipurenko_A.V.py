@@ -9,11 +9,12 @@
 num_1 = int(input("Введіть перше число: "))
 num_2 = int(input("Введіть друге число: "))
 
-if num_1 < num_2:
+if num_1 < num_2:    # якщо введено спочатку менше число
     for i in range(num_1, num_2):
         if i % 7 == 0:
             print("Числа: ", i)
-else:
+
+else:   # якщо введено спочатку більше число
     for i in range(num_2, num_1):
         if i % 7 == 0:
             print("Числа: ", i)
