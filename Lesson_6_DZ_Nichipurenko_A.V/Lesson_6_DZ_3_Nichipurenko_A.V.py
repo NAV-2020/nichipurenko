@@ -23,16 +23,19 @@ if num_1 < num_2:   # якщо введено спочатку менше чис
 
     for i in range(num_1 , num_2):       # Всі числа діапазона
         if i % 3 == 0:
-            print("Fizz")
+            print(i, " = Fizz")
 
-        elif i % 5 == 0:
-            print("Buzz")
+    for i in range(num_1, num_2):
+        if i % 5 == 0:
+            print(i, " = Buzz")
     
-        elif i % 3 and i % 5 == 0:
-            print("Fzz Buzz")
-
-        elif i % 3 and i % 5 !=0:
-            print(i)
+    for i in range(num_1, num_2):
+        if i % 3 and i % 5 == 0:
+            print("Числа кратні 3 і 5 - ", i, " = Fzz Buzz")
+    
+    for i in range(num_1, num_2):
+        if i % 3 and i % 5 !=0:
+            print("Числа не кратні ні 3 і 5 = ", i)
 
 else:           # якщо введено спочатку більше число
    
@@ -40,13 +43,16 @@ else:           # якщо введено спочатку більше числ
 
     for i in range(num_2, num_1):       # Всі числа діапазона
         if i % 3 == 0:
-            print("Fizz")
+            print(i, " = Fizz")
 
-        elif i % 5 == 0:
-            print("Buzz")
+    for i in range(num_2, num_1):
+        if i % 5 == 0:
+            print(i, " = Buzz")
     
-        elif i % 3 and i % 5 == 0:
-            print("Fzz Buzz")
+    for i in range(num_2, num_1):
+        if i % 3 and i % 5 == 0:
+            print("Числа кратні 3 і 5 - ", i, " = Fzz Buzz")
 
-        elif i % 3 and i % 5 !=0:
-            print(i)
+    for i in range(num_2, num_1):
+        if i % 3 and i % 5 !=0:
+            print("Числа не кратні ні 3 і 5 = ", i)
