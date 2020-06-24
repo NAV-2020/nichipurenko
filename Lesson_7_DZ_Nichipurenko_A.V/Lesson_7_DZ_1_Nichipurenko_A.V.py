@@ -7,9 +7,8 @@
 '''
 
 messag_e = input("Введіть строку: ")
-message_1 = messag_e.replace(" " , "") 
-message_1 = message_1.lower()
+message_1 = messag_e.replace(" " , "").lower() 
 if message_1 == message_1[::-1]:
    print(messag_e, ' - палиндром')
 else:
-    print(messag_e, ' - не палиндром')
+   print(messag_e, ' - не палиндром')
