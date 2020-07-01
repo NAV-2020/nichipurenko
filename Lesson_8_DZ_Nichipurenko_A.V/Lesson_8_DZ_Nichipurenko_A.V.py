@@ -15,8 +15,8 @@ print('''
 списков.
 ''')
 
-my_listOne = [int(i) for i in input('Введіть список 1 через пробел: ').split()]
-my_listTwo = [int(i) for i in input('Введіть список 2 через пробел: ').split()]
+my_listOne = [int(i) for i in input('Введіть список 1 через пробіл: ').split()]
+my_listTwo = [int(i) for i in input('Введіть список 2 через пробіл: ').split()]
 
 print()
 
