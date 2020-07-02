@@ -56,6 +56,37 @@ def foo(x):
 b = filter(foo, a)
 print(list(b))
 
-"""
+
 #### Замикання
 
+def outer(par):
+    loc = par
+    def inner():
+        return loc
+    return inner()
+var = 1
+a = outer(var)
+print(a)
+
+
+def makeclosere(a):
+    loc = a
+    def power(b):
+        return b**a
+    return power
+
+cub = makeclosere (3)
+print(cub(3))
+
+"""
+
+
+
+def mult(x):
+    for i in x
+        return (x*1)
+
+if __name__ == "__main__":
+    x = [i for i in range(1, 10)]
+    a = mult (x)
+    print(a)
