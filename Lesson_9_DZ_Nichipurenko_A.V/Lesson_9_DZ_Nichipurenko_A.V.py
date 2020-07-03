@@ -7,7 +7,7 @@ def text():
     “Don't compare yourself with anyone in this world...
     if you do so, you are insulting yourself.”
                                     Bill Gates \n''')
-    print()
+    print("#"*80, '\n')
     word1 = "  " + '''"Don't compare yourself with anyone in this world...'''
     word2 = "  " + ''' if you do so, you are insulting yourself." '''
     word3 = "\t"*4 + '''   Bill Gates''' 
@@ -19,9 +19,9 @@ def band(numX, numY):
     if numX < numY:
         result = [i for i in range(numX, numY) if i % 2==0]
         print('''Всі парні числа в указаному діапазоні: ''', result)
-    elif numX > numY:
-        result = [i for i in range(numY, numX) if i % 2==0]
-        print('''Всі парні числа в указаному діапазоні: ''', result)
+    #elif numX > numY:
+        #result = [i for i in range(numY, numX) if i % 2==0]
+        #print('''Всі парні числа в указаному діапазоні: ''', result)
 
 ''' Завдання 3 '''
 
@@ -131,9 +131,9 @@ my_Value = int(input('''Виберіть завдання:
 7  <- Завдання 7\n
 '''))
 
-
-if my_Value == 1:
+if my_Value == 1: # Відображення на екрані форматованого тексту
 	text()
+
 
 elif my_Value == 2:
     print('''Задание 2
@@ -142,8 +142,8 @@ elif my_Value == 2:
 между ними.\n''')
     numX = int(input("Введіть початок діапазону:\n"))
     numY = int(input("Введіть кінець діапазону:\n"))
-
     band (numX, numY)
+
 
 elif my_Value == 3:
     print('''Задание 3
@@ -158,36 +158,34 @@ elif my_Value == 3:
 
 
 elif my_Value == 4:
-
     print('''Задание 4
 Напишите функцию, которая возвращает минимальное
 из пяти чисел. Числа передаются в качестве параметров.\n''')
     my_Num = [int(i) for i in input("Введіть 5 чисел через пробіл: ").split()]
     if minNumber(my_Num) != None:
-        print ("Мінімальне число:", minNumber(my_Num))
+        print ("Мінімальне число:", minNumber(my_Num),'\n')
     else:
-        print("Введено не 5 чисел!!! ")
+        print("Введено НЕ 5 чисел!!!\n ")
         
 
 elif my_Value == 5:
-
     print ('''Задание 5
 Напишите функцию, которая возвращает произведение чисел в указанном диапазоне. Границы диапазона
 передаются в качестве параметров. Если границы диапазона перепутаны (например, 5 — верхняя граница, 
 25 — нижняя граница), их нужно поменять местами.\n''')
-
     my_X = int(input("Введите начало диапазона\n"))
     my_Y = int(input("Введите конец диапазона\n"))
     print ('''Результат множення чисел вказаного діапазона:''', multiplicNum(my_X, my_Y)) 
+
 
 elif my_Value == 6:
     print('''Задание 6
 Напишите функцию, которая считает количество цифр в числе. Число 
 передаётся в качестве параметра. Из функции нужно вернуть полученное 
 количество цифр. Например, если передали 3456, количество цифр будет 4.\n''')
-
     my_Num = input("Введіть число: ")
     print("Кількість чисел в заданому числі: ", countsNum(my_Num))
+
 
 elif my_Value == 7:
     print('''Задание 7
@@ -200,6 +198,6 @@ elif my_Value == 7:
 а 421987 — не палиндром.\n''')
     my_Num = input("Введіть число: ")
     if polyDrome(my_Num) == True:
-        print("Число полідром: ", my_Num)
+        print("Число полідром: ", my_Num,'\n')
     elif polyDrome(my_Num) == False:
-        print("Число не полідром: ", my_Num)
+        print("Число НЕ полідром: ", my_Num,'\n')
