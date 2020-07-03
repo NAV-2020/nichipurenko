@@ -1,5 +1,4 @@
-
-##############-1-#############
+''' Завдання 1 '''
 
 def text():
     print('''Задание 1
@@ -14,17 +13,17 @@ def text():
     word3 = "\t"*4 + '''   Bill Gates''' 
     print(word1, word2, word3, sep="\n", end="")
 
-##############-2-#############
+''' Завдання 2 '''
 
 def band(numX, numY):
     if numX < numY:
-        result = [i for i in range(numX, numY + 1) if i % 2==0]
+        result = [i for i in range(numX, numY) if i % 2==0]
         print('''Всі парні числа в указаному діапазоні: ''', result)
     elif numX > numY:
-        result = [i for i in range(numY, numX + 1) if i % 2==0]
+        result = [i for i in range(numY, numX) if i % 2==0]
         print('''Всі парні числа в указаному діапазоні: ''', result)
 
-##############-3-#############
+''' Завдання 3 '''
 
 def square(my_Width, my_Height):
     
@@ -42,13 +41,13 @@ def square(my_Width, my_Height):
 	    else:
 		    print(outlineSq+tmp * (my_Width - 2) + outlineSq)
 
-##############-4-#############
+''' Завдання 4 '''
 
-def minNumber():
-    my_Num = [int(i) for i in input('Введіть список чисел через пробіл: ').split()]
-    return (min(my_Num))
+def minNumber(me_Num):
+    if 5 == len(my_Num):
+        return (min(my_Num))
 
-##############-5-#############
+''' Завдання 5 '''
 
 def multiplicNum(my_X, my_Y):
     if my_X < my_Y:
@@ -62,22 +61,21 @@ def multiplicNum(my_X, my_Y):
 		    result *= i
 	    return (result)
 
-##############-6-#############
+''' Завдання 6 '''
 
 def countsNum(my_Num):
     return(len(my_Num))
 
-##############-7-#############
+''' Завдання 7 '''
 
 def polyDrome(my_Num):
     if my_Num == my_Num[::-1]:
-	    #print("Число полідром: ", my_Num)
         return True
     else:
-	    #print("Число не полідром: ", my_Num)
         return False
 
 #####################################################################################
+
 print('''
 Задание 1
 Напишите функцию, которая отображает на экран
@@ -160,10 +158,16 @@ elif my_Value == 3:
 
 
 elif my_Value == 4:
+
     print('''Задание 4
 Напишите функцию, которая возвращает минимальное
 из пяти чисел. Числа передаются в качестве параметров.\n''')
-    print ("Мінімальне число:", minNumber())
+    my_Num = [int(i) for i in input("Введіть 5 чисел через пробіл: ").split()]
+    if minNumber(my_Num) != None:
+        print ("Мінімальне число:", minNumber(my_Num))
+    else:
+        print("Введено не 5 чисел!!! ")
+        
 
 elif my_Value == 5:
 
@@ -174,8 +178,7 @@ elif my_Value == 5:
 
     my_X = int(input("Введите начало диапазона\n"))
     my_Y = int(input("Введите конец диапазона\n"))
-    multiplicNum (my_X, my_Y)
-    print ('''Результат множення чисел вказаного діапазона:''', multiplicNum(my_X, my_Y))
+    print ('''Результат множення чисел вказаного діапазона:''', multiplicNum(my_X, my_Y)) 
 
 elif my_Value == 6:
     print('''Задание 6
@@ -196,7 +199,6 @@ elif my_Value == 7:
 после переворота становится 123), 546645 — палиндром, 
 а 421987 — не палиндром.\n''')
     my_Num = input("Введіть число: ")
-    polyDrome(my_Num)
     if polyDrome(my_Num) == True:
         print("Число полідром: ", my_Num)
     elif polyDrome(my_Num) == False:
