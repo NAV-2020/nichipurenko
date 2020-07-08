@@ -23,5 +23,5 @@ def my_function_3(number):
 
 if __name__ == "__main__":
     
-    my_result = my_function_3(number = int(input("Введіть кінець списку: ")))
+    my_result = my_function_3(number = int(input("Введіть кінцеве значення списку: ")))
     print("Кількість простих чисел: ", my_result, '\n')
