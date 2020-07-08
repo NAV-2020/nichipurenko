@@ -15,7 +15,7 @@ def my_function_3(number):
                 break
         if prime:
             prime_numbers.append(num)
-            #print("Список простіх чисел:", num)
+
     print()
     print("Список простих чисел: ", prime_numbers, '\n')
     return len(prime_numbers)
