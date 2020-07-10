@@ -8,5 +8,5 @@ def myFun(myVar):
         return x * myVar
     return nestFun()
 
-
+print("Замикання на прикладі вкладеної функції.\n")
 print(myFun(myVar = int(input("Введіть число: "))))
