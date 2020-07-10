@@ -15,6 +15,7 @@ print("""
     буде об`єкт 'o' .\n""")
 myLst = ['help', 'Hello', 'Python', 'green', 'power']
 print('Список ітеруємих об`єктів: ', myLst, '\n')
+
 result = list(filter(my_fun, myLst))
 print('Результат: ', result)
 
