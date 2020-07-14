@@ -5,11 +5,11 @@ def decorFunc(func):
     що повертає функція, до якої декоратор застосовується.
     """
 
-    def funcOne(arg1, arg2, arg3):
+    def wrapperOne(arg1, arg2, arg3):
         varOne = func(arg1, arg2, arg3)
         result = [i**2 for i in varOne]
         return result 
-    return funcOne 
+    return wrapperOne 
 
 
 @decorFunc
