@@ -3,7 +3,7 @@ from random import randint
 
 def bubble_funk(nums):  
     """
-    Сортування бульбашкою
+    Сортування бульбашкою.
     """
     swap = True
     while swap:

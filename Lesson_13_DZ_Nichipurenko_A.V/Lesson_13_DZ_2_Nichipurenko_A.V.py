@@ -3,7 +3,7 @@ from random import randint
 
 def partition(nums, low, high):  
     """
-    Швидке сортування
+    Швидке сортування.
     """
     pivot = nums[(low + high) // 2]
     i = low - 1
