@@ -38,6 +38,13 @@ def del_basketball_player(surname: str) -> dict:
             del(BASKETBALL_PLAYER[index])
             return deleted_basketball_player
 
+def search_basketball_player(surname: str) -> dict:
+    global BASKETBALL_PLAYER
+    for basketball_player in BASKETBALL_PLAYER:
+        if basketball_player['Surname'] == surname:
+            return basketball_player
+    return f"Basketball player {surname} does not exist\n"
+
 def update_basketball_player(surname: str) -> dict:
     global BASKETBALL_PLAYER
     for index, basketball_player in enumerate(BASKETBALL_PLAYER):
@@ -65,21 +72,12 @@ def update_basketball_player(surname: str) -> dict:
             if new_growth:
                 basketball_player['Growth'] = new_growth
             return basketball_player
-        
-
-def search_basketball_player(surname: str) -> dict:
-    global BASKETBALL_PLAYER
-    for basketball_player in BASKETBALL_PLAYER:
-        if basketball_player['Surname'] == surname:
-            return basketball_player
-    return f"Basketball player {surname} does not exist\n"
 
 
 
 if __name__ == "__main__":
 
     BASKETBALL_PLAYER_LIST = 'list'     # список баскетболистов
-    #GROWTH = 'growth'                   # рост
     ADD_BASKETBALL_PLAYER = 'add'       # добавить.
     DEL_BASKETBALL_PLAYER = 'delete'    # удалить.
     UPDATE_BASKETBALL_PLAYER = 'update' # обновить.
@@ -108,7 +106,6 @@ if __name__ == "__main__":
             print_result(basketball_player)
 
         elif choice == ADD_BASKETBALL_PLAYER:
-
             surname = input('Enter first surname: ') # фамилие
             first_name = input('Enter first name: ') # имя
             middle_name = input('Enter first middle_name: ') # отчество
@@ -128,11 +125,11 @@ if __name__ == "__main__":
 
         elif choice == SEARCH_BASKETBALL_PLAYER:
             surname = input("Enter surname: ")
-            basketball_player = search_basketball_player(surname=surname)
+            basketball_player = search_basketball_player(surname = surname)
             print_result(basketball_player)
 
         elif choice == UPDATE_BASKETBALL_PLAYER:
             surname = input("Enter surname: ")
-            basketball_player = update_basketball_player(surname=surname)
+            basketball_player = update_basketball_player(surname = surname)
             if basketball_player != None:  
                 print_result(basketball_player)
