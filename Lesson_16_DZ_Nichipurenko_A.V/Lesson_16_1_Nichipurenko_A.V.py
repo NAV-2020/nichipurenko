@@ -37,18 +37,24 @@ def del_basketball_player(surname: str) -> dict:
             deleted_basketball_player = basketball_player
             del(BASKETBALL_PLAYER[index])
             return deleted_basketball_player
-"""
+
 def update_basketball_player(surname: str) -> dict:
     global BASKETBALL_PLAYER
     for index, basketball_player in enumerate(BASKETBALL_PLAYER):
-        if basketball_player['Surname'] == surname:
-            first_name = basketball_player["First name"]
-            surname = basketball_player["Surname"]
-            middle_name = basketball_player["Middle name"]
+        if basketball_player['Surname'] != surname:
+            print('There is no player with that name !!!')
+            input('Press to continue...')
 
-            new_first_name = input(f"Enter first name ({first_name} - default): ")
+        elif basketball_player['Surname'] == surname:
+            surname = basketball_player["Surname"]
+            first_name = basketball_player["First name"]
+            middle_name = basketball_player["Middle name"]
+            new_growth = basketball_player["Growth"]
+             
             new_surname = input(f"Enter surname ({surname} - default): ")
+            new_first_name = input(f"Enter first name ({first_name} - default): ")
             new_middle_name = input(f"Enter middle name ({middle_name} - default): ")
+            new_growth = input(f"Enter middle growth ({growth} - default): ")
 
             if new_first_name:
                 basketball_player['First name'] = new_first_name
@@ -56,9 +62,10 @@ def update_basketball_player(surname: str) -> dict:
                 basketball_player['Surname'] = new_surname
             if new_middle_name:
                 basketball_player['Middle name'] = new_middle_name
-            if new_growth['']
+            if new_growth:
+                basketball_player['Growth'] = new_growth
             return basketball_player
-"""
+        
 
 def search_basketball_player(surname: str) -> dict:
     global BASKETBALL_PLAYER
@@ -124,13 +131,8 @@ if __name__ == "__main__":
             basketball_player = search_basketball_player(surname=surname)
             print_result(basketball_player)
 
-"""
         elif choice == UPDATE_BASKETBALL_PLAYER:
             surname = input("Enter surname: ")
             basketball_player = update_basketball_player(surname=surname)
-            print_result(basketball_player)
-"""
-        
-        
-            
-    
+            if basketball_player != None:  
+                print_result(basketball_player)
