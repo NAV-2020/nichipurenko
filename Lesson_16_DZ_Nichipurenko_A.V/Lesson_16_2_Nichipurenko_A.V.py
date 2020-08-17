@@ -5,14 +5,14 @@
 удаления, поиска, замены данных. Используйте
 словарь для хранения информации.
 """
+import pprint
 
 def get_english_french_vocab(english_french_vocab: list) -> list:
     return english_french_vocab
 
 def print_result(*args) -> None:
     for element in args:
-        print(element)
-        #pprint.pprint(element, width=1)
+        pprint.pprint(element, width=1)
         input('Press to continue...')
 
 def add_words(english: str, french: str) -> dict:
@@ -117,7 +117,3 @@ if __name__ == "__main__":
             english_french_vocab = update_words(english = english)
             if english_french_vocab != None:  
                 print_result(english_french_vocab)
-
-
-
-    
