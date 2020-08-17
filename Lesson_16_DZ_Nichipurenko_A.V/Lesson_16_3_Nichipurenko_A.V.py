@@ -1,10 +1,10 @@
+"""
+Создайте программу «Фирма». Нужно хранить информацию о человеке: ФИО, телефон, рабочий email,
+название должности, номер кабинета, skype. Требуется
+реализовать возможность добавления, удаления, поиска, замены данных. Используйте словарь для хранения
+информации.
+"""
 
-"""
-Создайте программу «Фирма». Нужно хранить информацию о человеке: 
-ФИО, телефон, рабочий email, название должности, номер кабинета, skype. 
-Требуется реализовать возможность добавления, удаления, поиска, замены данных.
-Используйте словарь для хранения информации.
-"""
 import pprint
 
 def get_company_employee(company_employee: list) -> list:
@@ -48,6 +48,8 @@ def search_company_employee(surname_name_middle_name: str) -> dict:
     return f"The employee in the list {surname_name_middle_name} does not exist\n"
 
 def update_company_employee(surname_name_middle_name: str) -> dict:
+    pass
+    """
     global COMPANY_EMPLOYEE
     for index, company_employee in enumerate(COMPANY_EMPLOYEE):
         if company_employee['Surname, name, middle name'] != surname_name_middle_name:
@@ -83,6 +85,7 @@ def update_company_employee(surname_name_middle_name: str) -> dict:
             if new_skype:
                 company_employee['Skyper'] = new_skype
             return company_employee
+"""
 
 
 if __name__ == "__main__":
