@@ -87,10 +87,10 @@ def update_book(author: str) -> dict:
 if __name__ == "__main__":
     
     BOOKS_LIST = 'list'    # список книг
-    ADD_BOOK = 'add'       # добавить.
-    DEL_BOOK = 'delete'    # удалить.
-    SEARCH_BOOK = 'search' # поиск.
-    UPDATE_BOOK = 'update' # обновить.
+    ADD_BOOK = 'add'       # добавить
+    DEL_BOOK = 'delete'    # удалить
+    SEARCH_BOOK = 'search' # поиск
+    UPDATE_BOOK = 'update' # обновить
     EXIT = 'q'             # выход
     BOOK = []
 

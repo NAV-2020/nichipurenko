@@ -63,10 +63,10 @@ def update_words(english: str) -> dict:
 if __name__ == "__main__":
     
     ENGLISH_FRENCH_VOCAB_LIST = 'list'  # список слов
-    ADD_WORDS = 'add'                   # добавить.
-    DEL_WORDS = 'delete'                # удалить.
-    UPDATE_WORDS = 'update'             # обновить.
-    SEARCH_WORDS = 'search'             # поиск.
+    ADD_WORDS = 'add'                   # добавить
+    DEL_WORDS = 'delete'                # удалить
+    UPDATE_WORDS = 'update'             # обновить
+    SEARCH_WORDS = 'search'             # поиск
     EXIT = 'q'                          # выход
     ENGLISH_FRENCH_VOCAB = []
 

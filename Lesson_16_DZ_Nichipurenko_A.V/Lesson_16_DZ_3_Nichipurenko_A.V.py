@@ -90,7 +90,7 @@ if __name__ == "__main__":
     DEL_COMPANY_EMPLOYEE = 'delete'    # удалить
     UPDATE_COMPANY_EMPLOYEE = 'update' # обновить
     SEARCH_COMPANY_EMPLOYEE = 'search' # поиск
-    EXIT = 'q'                          # выход
+    EXIT = 'q'                         # выход
     COMPANY_EMPLOYEE = []
 
     print("""

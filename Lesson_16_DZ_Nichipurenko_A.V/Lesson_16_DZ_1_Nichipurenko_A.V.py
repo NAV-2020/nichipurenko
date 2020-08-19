@@ -78,10 +78,10 @@ def update_basketball_player(surname: str) -> dict:
 if __name__ == "__main__":
 
     BASKETBALL_PLAYER_LIST = 'list'     # список баскетболистов
-    ADD_BASKETBALL_PLAYER = 'add'       # добавить.
-    DEL_BASKETBALL_PLAYER = 'delete'    # удалить.
-    UPDATE_BASKETBALL_PLAYER = 'update' # обновить.
-    SEARCH_BASKETBALL_PLAYER = 'search' # поиск.
+    ADD_BASKETBALL_PLAYER = 'add'       # добавить
+    DEL_BASKETBALL_PLAYER = 'delete'    # удалить
+    UPDATE_BASKETBALL_PLAYER = 'update' # обновить
+    SEARCH_BASKETBALL_PLAYER = 'search' # поиск
     EXIT = 'q'                          # выход
     BASKETBALL_PLAYER = []
 
