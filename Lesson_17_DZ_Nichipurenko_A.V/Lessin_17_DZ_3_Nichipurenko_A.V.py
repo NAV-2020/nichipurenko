@@ -4,12 +4,11 @@
 """
 
 
-def number_of_offers(text: int) -> str:
+def number_of_offers(text: int) -> int:
     sentence = 0
     for i in text:
         if ((i=='.') or (i=='!') or (i=='?')):
             sentence +=1
-    print(type(sentence))
     return(sentence)
 
 if __name__ == "__main__":
