@@ -18,5 +18,4 @@ f = open('my_file.bin', 'wd')
 
 pickle.dump(my_list, f)
 
-
 f.close()
