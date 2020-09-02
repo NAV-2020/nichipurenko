@@ -54,7 +54,7 @@ class  Car:
             print(f"Left: {Car.numberCar}.")
 
     def change_engine_volume(self, engine_vol: float) -> None:
-        ''' '''
+        '''Method for entering engine displacement.'''
         try:
             self.engine_volume = float(engine_vol)
         except ValueError as e:
@@ -62,6 +62,7 @@ class  Car:
             print("Error: please enter a number of float")
 
     def set_color(self) -> str:
+        '''Random car color selection method.'''
         self.color = random.choice(Car.colors)
         return self.color
 
