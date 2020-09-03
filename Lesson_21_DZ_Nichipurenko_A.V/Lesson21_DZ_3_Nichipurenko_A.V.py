@@ -13,15 +13,17 @@ class Stadium:
     def __init__(self,
                 stadium_name: str,
                 opening_date: str,
-                country: str,
-                city: str,
-                capacity: int):
+                capacity: int = 0,
+                country: str = '',
+                city: str = '',
+                ):
         """Initializes the book data attributes"""
         self.stadium_name = stadium_name
         self.opening_date = opening_date
+        self.capacity = capacity
         self.country = country
         self.city = city
-        self.capacity = capacity
+
 
         Stadium.numberStadium += 1
 
@@ -44,13 +46,37 @@ class Stadium:
         else:
             print(f"Left: {Stadium.numberStadium}.")
 
+    @property
+    def set_country(self):
+        return self.country
+		
+    @set_country.setter
+    def set_country(self, value):
+        self.country = value.title()
+	
+    @property
+    def set_city(self):
+        return self.city
+		
+    @set_city.setter
+    def set_city(self, value):
+        self.city = value.title()
+    
+
 
 
 if __name__ == "__main__":
     
-    my_stadium1 = Stadium('"Olympic"', '12.11.2000', 'England', 'London', 5500)
+    my_stadium1 = Stadium('"Olympic"', '12.11.2000', 5500) 
+    my_stadium1.set_country = "England"   
+    my_stadium1.set_city = "London"     
+
     print(my_stadium1)
-    my_stadium2 = Stadium('"Spartacus"', '02.01.1980', 'France', 'Paris', 4300)
+
+    my_stadium2 = Stadium('"Spartacus"', '02.01.1980', 4300)
+    my_stadium2.set_country = "France" 
+    my_stadium2.set_city = "Paris"
+
     print(my_stadium2)
 
     print('Number of stadiums: ', Stadium.numberStadium)
@@ -58,3 +84,6 @@ if __name__ == "__main__":
     #print('Number of stadiums: ', Stadium.numberStadium)
 
     output = input('Press to continue...')
+
+    #('"Olympic"', '12.11.2000', 'England', 'London', 5500)
+    #('"Spartacus"', '02.01.1980', 'France', 'Paris', 4300)
