@@ -9,7 +9,7 @@
 import random
 
 class Book:
-    
+    """Class represents a list of books"""
     numberBook = 0
     genre = ['poetry', 'adventures', 'fantastic', 'detective']
 
