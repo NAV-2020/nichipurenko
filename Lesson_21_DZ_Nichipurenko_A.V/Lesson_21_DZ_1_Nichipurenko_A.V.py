@@ -45,8 +45,7 @@ class  Car:
         '''
 
     def __del__(self):
-        """Destructor call, when the object(car) is removed from the list)"""
-        
+        """Destructor call, when the object(Car) is removed from the list."""
         print(f"Car {self.model} removed from the list!")
         Car.numberCar -= 1
         if Car.numberCar == 0:
@@ -59,7 +58,7 @@ class  Car:
         try:
             self.engine_volume = float(engine_vol)
         except ValueError as e:
-            print(e)
+            #print(e)
             print("Error: please enter a number of float")
 
     def set_color(self) -> str:
@@ -79,14 +78,14 @@ class  Car:
 if __name__ == "__main__":
     
     my_car1 = Car('BMW', 1999, 'Germany')
-    engine_vol = input("Enter engine volume: ")
+    engine_vol = input("Enter engine volume car 1: ")
     my_car1.change_engine_volume(engine_vol)
     my_car1.set_price = 1
     my_car1.set_color()
     print(my_car1)
 
     my_car2 = Car('Fiat', 2015, 'Italy')
-    engine_vol = input("Enter engine volume: ")
+    engine_vol = input("Enter engine volume car 2: ")
     my_car2.change_engine_volume(engine_vol)
     my_car2.set_price = 2
     my_car2.set_color()
