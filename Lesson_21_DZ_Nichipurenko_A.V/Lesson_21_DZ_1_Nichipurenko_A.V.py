@@ -13,12 +13,13 @@ class  Car:
 
     numberCar = 0
     colors = ['RED', 'GREEN', 'GRAY', 'BLACK']
+    price = [1000.0, 1500.30, 2200.40, 3200.0]
 
     def __init__(self,
                 model: str, 
                 year: int, 
                 manufacturer:str,
-                price: float,
+                price: float = 0.0,
                 color: str = '',
                 engine_volume: float = 0.0):
         """Initializes the vehicle data attributes"""
@@ -66,23 +67,36 @@ class  Car:
         self.color = random.choice(Car.colors)
         return self.color
 
+    @property
+    def set_price(self) -> float:
+        '''Returns the price of a car'''
+        return Car.price[self.price]
+		
+    @set_price.setter
+    def set_price(self, val: int) -> None:
+	    self.price = Car.price[val]
+
 if __name__ == "__main__":
     
-    my_car1 = Car('BMW', 1999, 'Germany',3500.2)
+    my_car1 = Car('BMW', 1999, 'Germany')
     engine_vol = input("Enter engine volume: ")
     my_car1.change_engine_volume(engine_vol)
+    my_car1.set_price = 1
     my_car1.set_color()
-
     print(my_car1)
-    print('Colors: ', my_car1.color)
+
+    my_car2 = Car('Fiat', 2015, 'Italy')
+    engine_vol = input("Enter engine volume: ")
+    my_car2.change_engine_volume(engine_vol)
+    my_car2.set_price = 2
+    my_car2.set_color()
+    print(my_car2)
+
     print("Number of cars: ", Car.numberCar)
-
-    #my_car2 = Car('Fiat', 2015, 'Italy', 2000.0)
-    #my_car3 = Car('ZAZ', 2000, 'Ukraine', 100.3)
-    #del my_car1
-
     output = input('Press to continue...')
-
+    
+    #del my_car1
+    
 
     
    
