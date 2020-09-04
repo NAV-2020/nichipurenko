@@ -27,7 +27,7 @@ class Stadium:
 
         Stadium.numberStadium += 1
 
-    def __str__(self):
+    def __str__(self) -> str:
         '''Returns data'''
         return f'''
         Stadium name: {self.stadium_name} 
@@ -36,6 +36,14 @@ class Stadium:
         City: {self.city} 
         Capacity: {self.capacity}
         '''
+
+    def __repr__(self) -> str:
+        '''Returns the string representation of an object'''
+        return f''' {self.stadium_name} 
+                    {self.opening_date} 
+                    {self.country} 
+                    {self.city} 
+                    {self.capacity}'''
 
     def __del__(self):
         """Destructor call, when the object(Stadium) is removed from the list"""
@@ -47,32 +55,34 @@ class Stadium:
             print(f"Left: {Stadium.numberStadium}.")
 
     @property
-    def set_country(self):
+    def set_country(self) -> str:
+        """Returns the country """
         return self.country
 		
     @set_country.setter
-    def set_country(self, value):
-        self.country = value.title()
+    def set_country(self, value: str):
+        """Sets the country"""
+        self.country = value
 	
     @property
-    def set_city(self):
+    def set_city(self) -> str:
+        """Returns the city""" 
         return self.city
 		
     @set_city.setter
-    def set_city(self, value):
-        self.city = value.title()
-    
-
-
+    def set_city(self, value: str):
+        """Sets the city"""
+        self.city = value
 
 if __name__ == "__main__":
     
     my_stadium1 = Stadium('"Olympic"', '12.11.2000', 5500) 
+
     my_stadium1.set_country = "England"   
     my_stadium1.set_city = "London"     
 
     print(my_stadium1)
-
+    
     my_stadium2 = Stadium('"Spartacus"', '02.01.1980', 4300)
     my_stadium2.set_country = "France" 
     my_stadium2.set_city = "Paris"
@@ -80,10 +90,8 @@ if __name__ == "__main__":
     print(my_stadium2)
 
     print('Number of stadiums: ', Stadium.numberStadium)
+
+   
     #del my_stadium1
     #print('Number of stadiums: ', Stadium.numberStadium)
-
-    output = input('Press to continue...')
-
-    #('"Olympic"', '12.11.2000', 'England', 'London', 5500)
-    #('"Spartacus"', '02.01.1980', 'France', 'Paris', 4300)
+    #output = input('Press to continue...')
