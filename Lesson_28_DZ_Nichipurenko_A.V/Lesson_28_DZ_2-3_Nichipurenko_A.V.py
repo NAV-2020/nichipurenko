@@ -97,14 +97,14 @@ if __name__ == "__main__":
         print('*'*60)
         print("Make your choice:")
         choice = input("""    
-        1. Push a string onto the stack -------------> 1    Вставьте строку в стек
-        2. Remove a line from the stack -------------> 2    выталкивание строки из стека
-        3. Count the number of lines on the stack ---> 3    подсчет количества строк в стеке;
-        4. Check if the stack is empty --------------> 4    проверку пустой ли стек;
-        5. Check if the stack is full ---------------> 5    проверку полный ли стек
-        6. Read the stack ---------------------------> 6    очистку стека;
-        7. Get value from the stack -----------------> 7    получе значен без выталки верхней стр из стека
-        8. Resize stack -----------------------------> 8    Изменить размер стека
+        1. Push a string onto the stack -------------> 1    
+        2. Remove a line from the stack -------------> 2    
+        3. Count the number of lines on the stack ---> 3    
+        4. Check if the stack is empty --------------> 4    
+        5. Check if the stack is full ---------------> 5    
+        6. Read the stack ---------------------------> 6    
+        7. Get value from the stack -----------------> 7    
+        8. Resize stack -----------------------------> 8    
         9. Exit -------------------------------------> q
         
         Сhoice: """)
